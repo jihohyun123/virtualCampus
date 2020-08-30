@@ -270,7 +270,6 @@ class ResourcesListDesktop extends ResourcesListFunctionality {
                       img={data.img}
                       title={data.title}
                       description={data.description}
-                      description={"hello"}
                       iosLink={data.links.iosLink}
                       androidLink={data.links.androidLink}
                       tags={data.category.tags}

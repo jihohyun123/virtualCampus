@@ -220,7 +220,7 @@ class ResourcesListMobile extends ResourcesListFunctionality {
                       website={data.links.website}
                       img={data.img}
                       title={data.title}
-                      description={"hello"}
+                      description={data.description}
                       iosLink={data.links.iosLink}
                       androidLink={data.links.androidLink}
                       tags={data.category.tags}
