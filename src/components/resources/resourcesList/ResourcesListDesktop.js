@@ -12,14 +12,13 @@ import {
 } from "../..";
 import ResourcesListFunctionality from "./ResourcesListFunctionality"
 import {CoolerButton} from "./ResourcesListFunctionality"
-import {CircularProgress, Select, MenuItem, IconButton} from "@material-ui/core";
+import {Select, MenuItem, IconButton} from "@material-ui/core";
 import ViewListIcon from '@material-ui/icons/ViewList';
 import GridOnIcon from '@material-ui/icons/GridOn';
 import {withStyles} from "@material-ui/core/styles";
 import AppBar from '@material-ui/core/AppBar';
 import {Element} from "react-scroll";
 import ScrollableAnchor from "react-scrollable-anchor";
-import Card from "@material-ui/core/Card";
 
 
 const useStyles = () => ({
@@ -124,10 +123,6 @@ class ResourcesListDesktop extends ResourcesListFunctionality {
     this.category = "All Resources";
   }
 
-  handleClickTag(categories){
-    return this.setTagDisplay.bind(this, "recreation")
-  };
-
   handleClickView(isGridView){
     this.setState({
       gridView: isGridView
@@ -189,7 +184,7 @@ class ResourcesListDesktop extends ResourcesListFunctionality {
               <CustomButton size="medium"
                       active={(this.state.activeTags === category)}
                       simple
-                      
+
                       // if category is "All Resources", do not display
                       style={category !== "All Resources" ?{
                           width: '16%',
@@ -202,7 +197,7 @@ class ResourcesListDesktop extends ResourcesListFunctionality {
                           fontWeight: '900',
                           fontSize: '14px',
                           whiteSpace: 'normal',
-                          
+
                       }
                       :{
                         display: 'None'
@@ -217,12 +212,12 @@ class ResourcesListDesktop extends ResourcesListFunctionality {
                         else
                         {
                           this.category = category;
-                        }  
+                        }
                         this.deleteDisplay.bind(this, category);
                         this.setDisplay.bind(this, category)();
-                        
+
                       }}
-                      
+
                       val={category}
                       color={
                         (this.category === category) ? "blue" : 'paleblue'
